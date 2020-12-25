@@ -45,6 +45,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D43CB082596199600859F91 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1D43CB09259619A300859F91 /* Model */,
+				1D43CB0B259619B200859F91 /* View */,
+				1D43CB0A259619AA00859F91 /* Controller */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1D43CB09259619A300859F91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D43CB0A259619AA00859F91 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D50A4422594C8440001B551 /* AppDelegate.swift */,
+				1D50A4442594C8440001B551 /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1D43CB0B259619B200859F91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D50A4482594C8440001B551 /* Main.storyboard */,
+				1D50A44D2594C8490001B551 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D43CB0C25961A3D00859F91 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1D43CB0F25961A5400859F91 /* Model */,
+				1D43CB0E25961A4E00859F91 /* View */,
+				1D43CB0D25961A4900859F91 /* Controller */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1D43CB0D25961A4900859F91 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D50A4462594C8440001B551 /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1D43CB0E25961A4E00859F91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D43CAFD2596082700859F91 /* SearchResultCell.swift */,
+				1D50A45E2594F6C00001B551 /* SearchResultCell.xib */,
+				1D43CB052596108A00859F91 /* NothingFoundCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D43CB0F25961A5400859F91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D50A45B2594D6BA0001B551 /* SearchResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1D50A4362594C8440001B551 = {
 			isa = PBXGroup;
 			children = (
@@ -64,12 +135,8 @@
 		1D50A4412594C8440001B551 /* SearchMusic */ = {
 			isa = PBXGroup;
 			children = (
-				1D50A4462594C8440001B551 /* SearchViewController.swift */,
-				1D50A45B2594D6BA0001B551 /* SearchResult.swift */,
-				1D50A45E2594F6C00001B551 /* SearchResultCell.xib */,
-				1D43CAFD2596082700859F91 /* SearchResultCell.swift */,
-				1D43CB052596108A00859F91 /* NothingFoundCell.xib */,
-				1D50A4482594C8440001B551 /* Main.storyboard */,
+				1D43CB082596199600859F91 /* Application */,
+				1D43CB0C25961A3D00859F91 /* Search */,
 				1D50A4582594D6720001B551 /* Supporting Files */,
 			);
 			path = SearchMusic;
@@ -78,10 +145,7 @@
 		1D50A4582594D6720001B551 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1D50A4422594C8440001B551 /* AppDelegate.swift */,
-				1D50A4442594C8440001B551 /* SceneDelegate.swift */,
 				1D50A44B2594C8490001B551 /* Assets.xcassets */,
-				1D50A44D2594C8490001B551 /* LaunchScreen.storyboard */,
 				1D50A4502594C8490001B551 /* Info.plist */,
 			);
 			path = "Supporting Files";
