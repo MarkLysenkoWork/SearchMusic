@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D43CAFE2596082700859F91 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43CAFD2596082700859F91 /* SearchResultCell.swift */; };
+		1D43CB062596108A00859F91 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D43CB052596108A00859F91 /* NothingFoundCell.xib */; };
 		1D50A4432594C8440001B551 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D50A4422594C8440001B551 /* AppDelegate.swift */; };
 		1D50A4452594C8440001B551 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D50A4442594C8440001B551 /* SceneDelegate.swift */; };
 		1D50A4472594C8440001B551 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D50A4462594C8440001B551 /* SearchViewController.swift */; };
@@ -14,9 +16,12 @@
 		1D50A44C2594C8490001B551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D50A44B2594C8490001B551 /* Assets.xcassets */; };
 		1D50A44F2594C8490001B551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D50A44D2594C8490001B551 /* LaunchScreen.storyboard */; };
 		1D50A45C2594D6BA0001B551 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D50A45B2594D6BA0001B551 /* SearchResult.swift */; };
+		1D50A45F2594F6C00001B551 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D50A45E2594F6C00001B551 /* SearchResultCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D43CAFD2596082700859F91 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		1D43CB052596108A00859F91 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		1D50A43F2594C8440001B551 /* SearchMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D50A4422594C8440001B551 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D50A4442594C8440001B551 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		1D50A44E2594C8490001B551 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D50A4502594C8490001B551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D50A45B2594D6BA0001B551 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		1D50A45E2594F6C00001B551 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 			children = (
 				1D50A4462594C8440001B551 /* SearchViewController.swift */,
 				1D50A45B2594D6BA0001B551 /* SearchResult.swift */,
+				1D50A45E2594F6C00001B551 /* SearchResultCell.xib */,
+				1D43CAFD2596082700859F91 /* SearchResultCell.swift */,
+				1D43CB052596108A00859F91 /* NothingFoundCell.xib */,
 				1D50A4482594C8440001B551 /* Main.storyboard */,
 				1D50A4582594D6720001B551 /* Supporting Files */,
 			);
@@ -137,6 +146,8 @@
 			files = (
 				1D50A44F2594C8490001B551 /* LaunchScreen.storyboard in Resources */,
 				1D50A44C2594C8490001B551 /* Assets.xcassets in Resources */,
+				1D50A45F2594F6C00001B551 /* SearchResultCell.xib in Resources */,
+				1D43CB062596108A00859F91 /* NothingFoundCell.xib in Resources */,
 				1D50A44A2594C8440001B551 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +163,7 @@
 				1D50A4432594C8440001B551 /* AppDelegate.swift in Sources */,
 				1D50A45C2594D6BA0001B551 /* SearchResult.swift in Sources */,
 				1D50A4452594C8440001B551 /* SceneDelegate.swift in Sources */,
+				1D43CAFE2596082700859F91 /* SearchResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

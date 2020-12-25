@@ -1,0 +1,25 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "locale" : "Books",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "LandscapeBackground-dark@2x.png",
+      "idiom" : "universal",
+      "locale" : "Books",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "LandscapeBackground-dark@3x.png",
+      "idiom" : "universal",
+      "locale" : "Books",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
