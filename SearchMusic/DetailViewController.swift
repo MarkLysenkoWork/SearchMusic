@@ -8,6 +8,8 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+
+    
     
     @IBOutlet var popupView: UIView!
     @IBOutlet var artworkImageView: UIImageView!
@@ -17,8 +19,14 @@ class DetailViewController: UIViewController {
     @IBOutlet var genreLabel: UILabel!
     @IBOutlet var priceButton: UIButton!
     
+    enum AnimationStyle {
+        case slide
+        case fade
+    }
+    
     var searchResult: SearchResult!
     var downloadTask: URLSessionDownloadTask?
+    var dismissStyle = AnimationStyle.fade
     
     
     override func viewDidLoad() {
@@ -33,22 +41,35 @@ class DetailViewController: UIViewController {
         if searchResult != nil {
             updateUI()
         }
+        
+        // Gradient view
+        view.backgroundColor = UIColor.clear
+        let dimmingView = GradientView(frame: CGRect.zero)
+        dimmingView.frame = view.bounds
+        view.insertSubview(dimmingView, at: 0)
+        
     }
     
     deinit {
-      print("deinit \(self)")
-      downloadTask?.cancel()
+        print("deinit \(self)")
+        downloadTask?.cancel()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        transitioningDelegate = self
     }
     
     // MARK: - Actions
     @IBAction func close() {
+        dismissStyle = .slide  
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func openInStore() {
-      if let url = URL(string: searchResult.storeURL) {
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-      }
+        if let url = URL(string: searchResult.storeURL) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     // MARK: - Helper Methods
@@ -82,19 +103,31 @@ class DetailViewController: UIViewController {
         
         // Get image
         if let largeURL = URL(string: searchResult.imageLarge) {
-          downloadTask = artworkImageView.loadImage(url: largeURL)
+            downloadTask = artworkImageView.loadImage(url: largeURL)
         }
-
+        
         
     }
-    
-    
-    
-    
 }
-
+//MARK: - Gesture Recognizer Delegete
 extension DetailViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         return (touch.view === self.view)
+    }
+}
+
+//MARK: - View Controller Transition Delegate
+extension DetailViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return BounceAnimationController()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+      switch dismissStyle {
+      case .slide:
+        return SlideOutAnimationController()
+      case .fade:
+        return FadeOutAnimationController()
+      }
     }
 }
