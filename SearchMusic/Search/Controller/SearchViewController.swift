@@ -43,28 +43,28 @@ class SearchViewController: UIViewController {
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-      super.willTransition(to: newCollection, with: coordinator)
-
-      switch newCollection.verticalSizeClass {
-      case .compact:
-        showLandscape(with: coordinator)
-      case .regular, .unspecified:
-        hideLandscape(with: coordinator)
-      @unknown default:
-        break
-      }
+        super.willTransition(to: newCollection, with: coordinator)
+        
+        switch newCollection.verticalSizeClass {
+        case .compact:
+            showLandscape(with: coordinator)
+        case .regular, .unspecified:
+            hideLandscape(with: coordinator)
+        @unknown default:
+            break
+        }
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if segue.identifier == "ShowDetail" {
-        if case .results(let list) = search.state {
-          let detailViewController = segue.destination as! DetailViewController
-          let indexPath = sender as! IndexPath
-          let searchResult = list[indexPath.row]
-          detailViewController.searchResult = searchResult
+        if segue.identifier == "ShowDetail" {
+            if case .results(let list) = search.state {
+                let detailViewController = segue.destination as! DetailViewController
+                let indexPath = sender as! IndexPath
+                let searchResult = list[indexPath.row]
+                detailViewController.searchResult = searchResult
+            }
         }
-      }
     }
     
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
@@ -97,7 +97,7 @@ class SearchViewController: UIViewController {
             }, completion: { _ in
                 controller.didMove(toParent: self)
                 if self.presentedViewController != nil {
-                  self.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true, completion: nil)
                 }
             })
             
@@ -113,6 +113,9 @@ class SearchViewController: UIViewController {
                 controller.view.removeFromSuperview()
                 controller.removeFromParent()
                 self.landscapeVC = nil
+                if self.presentedViewController != nil {
+                    self.dismiss(animated: true, completion: nil)
+                }
             })
         }
     }
@@ -132,61 +135,61 @@ extension SearchViewController: UISearchBarDelegate {
                     self.showNetworkError()
                 }
                 self.tableView.reloadData()
-                
+                self.landscapeVC?.searchResultsReceived()
             }
             tableView.reloadData()
             searchBar.resignFirstResponder()
-        }
-    }
-
-
-    /*
-    func performSearch() {
-        if !searchBar.text!.isEmpty {
-            searchBar.resignFirstResponder()
-            dataTask?.cancel()
-            isLoading = true
-            tableView.reloadData()
-            hasSearched = true
-            searchResults = []
-            
-            
-            
-            let url = iTunesURL(searchText: searchBar.text!, category: segmentedControl.selectedSegmentIndex) 
-            let session = URLSession.shared
-            dataTask = session.dataTask(with: url) { data, response, error in
-                print("On main thread? " + (Thread.current.isMainThread ? "Yes" : "No"))
-                if let error = error as NSError?, error.code == -999 {
-                    return
-                } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                    if let data = data {
-                        self.searchResults = self.parse(data: data)
-                        self.searchResults.sort(by: <)
-                        DispatchQueue.main.async {
-                            self.isLoading = false
-                            self.tableView.reloadData()
-                        }
-                        return
-                    }
-                } else {
-                    print("Failure! \(response!)")
-                }
-                DispatchQueue.main.async {
-                    self.hasSearched = false
-                    self.isLoading = false
-                    self.tableView.reloadData()
-                    self.showNetworkError()
-                }
-            }
-            dataTask?.resume()
         }
     }
     
-    //delete top line
-    func position(for bar: UIBarPositioning) -> UIBarPosition {
-        .topAttached
-    }
- */
+    
+    /*
+     func performSearch() {
+     if !searchBar.text!.isEmpty {
+     searchBar.resignFirstResponder()
+     dataTask?.cancel()
+     isLoading = true
+     tableView.reloadData()
+     hasSearched = true
+     searchResults = []
+     
+     
+     
+     let url = iTunesURL(searchText: searchBar.text!, category: segmentedControl.selectedSegmentIndex)
+     let session = URLSession.shared
+     dataTask = session.dataTask(with: url) { data, response, error in
+     print("On main thread? " + (Thread.current.isMainThread ? "Yes" : "No"))
+     if let error = error as NSError?, error.code == -999 {
+     return
+     } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+     if let data = data {
+     self.searchResults = self.parse(data: data)
+     self.searchResults.sort(by: <)
+     DispatchQueue.main.async {
+     self.isLoading = false
+     self.tableView.reloadData()
+     }
+     return
+     }
+     } else {
+     print("Failure! \(response!)")
+     }
+     DispatchQueue.main.async {
+     self.hasSearched = false
+     self.isLoading = false
+     self.tableView.reloadData()
+     self.showNetworkError()
+     }
+     }
+     dataTask?.resume()
+     }
+     }
+     
+     //delete top line
+     func position(for bar: UIBarPositioning) -> UIBarPosition {
+     .topAttached
+     }
+     */
 }
 
 
@@ -204,7 +207,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             return list.count
         }
     }
-
+    
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

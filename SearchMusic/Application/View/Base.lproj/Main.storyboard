@@ -30,7 +30,7 @@
                                 <rect key="frame" x="44" y="56" width="808" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" id="RyI-va-qHU">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="eAm-YZ-dY6">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="eAm-YZ-dY6">
                                             <rect key="frame" x="16" y="5.5" width="776" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
@@ -205,8 +205,12 @@
                             <constraint firstItem="11Z-md-RQb" firstAttribute="centerY" secondItem="dP7-WA-VvQ" secondAttribute="centerY" id="b8V-sj-di9"/>
                             <constraint firstItem="11Z-md-RQb" firstAttribute="centerX" secondItem="dP7-WA-VvQ" secondAttribute="centerX" id="e51-Pt-1pL"/>
                             <constraint firstItem="dP7-WA-VvQ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="11Z-md-RQb" secondAttribute="bottom" constant="16" id="fbt-vS-6hx"/>
-                            <constraint firstItem="dP7-WA-VvQ" firstAttribute="trailing" secondItem="11Z-md-RQb" secondAttribute="trailing" constant="32" id="pkS-BC-TfT"/>
-                            <constraint firstItem="11Z-md-RQb" firstAttribute="leading" secondItem="dP7-WA-VvQ" secondAttribute="leading" constant="32" id="vP9-zy-a4s"/>
+                            <constraint firstItem="dP7-WA-VvQ" firstAttribute="trailing" secondItem="11Z-md-RQb" secondAttribute="trailing" constant="32" id="pkS-BC-TfT">
+                                <variation key="heightClass=compact-widthClass=compact" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="11Z-md-RQb" firstAttribute="leading" secondItem="dP7-WA-VvQ" secondAttribute="leading" constant="32" id="vP9-zy-a4s">
+                                <variation key="heightClass=compact-widthClass=compact" constant="150"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <connections>
@@ -221,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdP-3c-Shd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="139"/>
+            <point key="canvasLocation" x="885" y="487"/>
         </scene>
         <!--Landscape-->
         <scene sceneID="LRG-Pc-bAE">
@@ -254,13 +258,17 @@
                     <connections>
                         <outlet property="pageControl" destination="7p6-aq-RXJ" id="6lN-EG-MnI"/>
                         <outlet property="scrollView" destination="GDm-0E-5tO" id="usA-NG-qbJ"/>
+                        <segue destination="y9x-X7-nnc" kind="presentation" identifier="ShowDetail" id="T9f-G3-Un2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Djj-eO-WrB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632" y="126"/>
+            <point key="canvasLocation" x="137" y="909"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="T9f-G3-Un2"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="PriceButton" width="11" height="10"/>
@@ -272,7 +280,7 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DetailBG">
-            <color red="0.77254903316497803" green="0.77254903316497803" blue="0.77254903316497803" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77254903316497803" green="0.77254903316497803" blue="0.77254903316497803" alpha="0.94999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SearchBar">
             <color red="0.70588235294117652" green="0.94117647058823528" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
