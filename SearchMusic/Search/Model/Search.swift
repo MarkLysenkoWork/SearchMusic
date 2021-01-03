@@ -25,7 +25,6 @@ class Search {
             case .ebooks: return "ebook"
             }
         }
-        
     }
     
     enum State {
@@ -86,10 +85,6 @@ class Search {
         let url = URL(string: urlString)
         return url!
     }
-    
-   
-
-    
     
     private func parse(data: Data) -> [SearchResult] {
         do {

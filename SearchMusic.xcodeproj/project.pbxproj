@@ -73,18 +73,10 @@
 		1D43CB082596199600859F91 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				1D43CB09259619A300859F91 /* Model */,
 				1D43CB0B259619B200859F91 /* View */,
 				1D43CB0A259619AA00859F91 /* Controller */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		1D43CB09259619A300859F91 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1D43CB0A259619AA00859F91 /* Controller */ = {
@@ -145,7 +137,6 @@
 		1D43CB36259CA20600859F91 /* Detail Search */ = {
 			isa = PBXGroup;
 			children = (
-				1D43CB39259CA22500859F91 /* Model */,
 				1D43CB38259CA21F00859F91 /* View */,
 				1D43CB37259CA21600859F91 /* Controller */,
 			);
@@ -168,13 +159,6 @@
 				1D43CB21259B712700859F91 /* GradientView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		1D43CB39259CA22500859F91 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1D43CB3A259CA2E900859F91 /* Animation Controllers */ = {

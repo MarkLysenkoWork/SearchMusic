@@ -9,8 +9,6 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    
-    
     @IBOutlet var popupView: UIView!
     @IBOutlet var artworkImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!

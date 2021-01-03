@@ -73,7 +73,6 @@ class SearchViewController: UIViewController {
     
     // MARK: - Helper Methods
     
-    
     func showNetworkError() {
         let alert = UIAlertController(
             title: NSLocalizedString("Whoops...", comment: "Error alert: title"),

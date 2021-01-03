@@ -78,7 +78,6 @@ class SearchResult: Codable, CustomStringConvertible {
       "tv-episode": NSLocalizedString("TV Episode", comment: "Localized kind: TV Episode")
     ]
 
-    
     var type: String {
       let kind = self.kind ?? "audiobook"
       return typeForKind[kind] ?? kind
