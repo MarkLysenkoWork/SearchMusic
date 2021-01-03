@@ -75,7 +75,11 @@ class SearchViewController: UIViewController {
     
     
     func showNetworkError() {
-        let alert = UIAlertController(title: "Whoops...", message: "There was an error accessing the iTunes Store." + " Please try again.", preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: NSLocalizedString("Whoops...", comment: "Error alert: title"),
+            message: NSLocalizedString("There was an error reading from the iTunes Store. Please try again.", comment: "Error alert: message"),
+          preferredStyle: .alert)
+
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
@@ -109,13 +113,13 @@ class SearchViewController: UIViewController {
             controller.willMove(toParent: nil)
             coordinator.animate(alongsideTransition: { _ in
                 controller.view.alpha = 0
+                if self.presentedViewController != nil {
+                    self.dismiss(animated: true, completion: nil)
+                }
             }, completion: { _ in
                 controller.view.removeFromSuperview()
                 controller.removeFromParent()
                 self.landscapeVC = nil
-                if self.presentedViewController != nil {
-                    self.dismiss(animated: true, completion: nil)
-                }
             })
         }
     }
@@ -141,55 +145,6 @@ extension SearchViewController: UISearchBarDelegate {
             searchBar.resignFirstResponder()
         }
     }
-    
-    
-    /*
-     func performSearch() {
-     if !searchBar.text!.isEmpty {
-     searchBar.resignFirstResponder()
-     dataTask?.cancel()
-     isLoading = true
-     tableView.reloadData()
-     hasSearched = true
-     searchResults = []
-     
-     
-     
-     let url = iTunesURL(searchText: searchBar.text!, category: segmentedControl.selectedSegmentIndex)
-     let session = URLSession.shared
-     dataTask = session.dataTask(with: url) { data, response, error in
-     print("On main thread? " + (Thread.current.isMainThread ? "Yes" : "No"))
-     if let error = error as NSError?, error.code == -999 {
-     return
-     } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-     if let data = data {
-     self.searchResults = self.parse(data: data)
-     self.searchResults.sort(by: <)
-     DispatchQueue.main.async {
-     self.isLoading = false
-     self.tableView.reloadData()
-     }
-     return
-     }
-     } else {
-     print("Failure! \(response!)")
-     }
-     DispatchQueue.main.async {
-     self.hasSearched = false
-     self.isLoading = false
-     self.tableView.reloadData()
-     self.showNetworkError()
-     }
-     }
-     dataTask?.resume()
-     }
-     }
-     
-     //delete top line
-     func position(for bar: UIBarPositioning) -> UIBarPosition {
-     .topAttached
-     }
-     */
 }
 
 

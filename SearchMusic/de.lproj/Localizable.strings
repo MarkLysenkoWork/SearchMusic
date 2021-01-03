@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  SearchMusic
+
+  Created by Mark Lysenko on 03.01.2021.
+  
+*/
+
+/* Localized kind: Album */
+"Album" = "Album";
+
+/* Localized kind: Software */
+"App" = "App";
+
+/* Localized kind: Audio Book */
+"Audio Book" = "Hörbuch";
+
+/* Localized kind: Book */
+"Book" = "Buch";
+
+/* Localized kind: E-Book */
+"E-Book" = "E-Book";
+
+/* Localized kind: Feature Movie */
+"Movie" = "Film";
+
+/* Localized kind: Music Video */
+"Music Video" = "Musik-Video";
+
+/* Localized kind: Podcast */
+"Podcast" = "Podcast";
+
+/* Localized kind: Song */
+"Song" = "Lied";
+
+/* Localized kind: TV Episode */
+"TV Episode" = "Fernseh Episode";
+

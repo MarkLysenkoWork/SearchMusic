@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1D43CAFE2596082700859F91 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43CAFD2596082700859F91 /* SearchResultCell.swift */; };
-		1D43CB062596108A00859F91 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D43CB052596108A00859F91 /* NothingFoundCell.xib */; };
-		1D43CB12259A11F600859F91 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D43CB11259A11F600859F91 /* LoadingCell.xib */; };
 		1D43CB18259A5E7E00859F91 /* UIImageView + DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43CB17259A5E7E00859F91 /* UIImageView + DownloadImage.swift */; };
 		1D43CB1E259B441100859F91 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43CB1D259B441100859F91 /* DetailViewController.swift */; };
 		1D43CB22259B712700859F91 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43CB21259B712700859F91 /* GradientView.swift */; };
@@ -18,6 +16,10 @@
 		1D43CB2B259B901F00859F91 /* LandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43CB2A259B901F00859F91 /* LandscapeViewController.swift */; };
 		1D43CB2E259B946600859F91 /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43CB2D259B946600859F91 /* FadeOutAnimationController.swift */; };
 		1D43CB33259BB1B800859F91 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43CB32259BB1B800859F91 /* Search.swift */; };
+		1D43CB3E25A0E74000859F91 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D43CB4025A0E74000859F91 /* NothingFoundCell.xib */; };
+		1D43CB4425A1EC8400859F91 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D43CB4625A1EC8400859F91 /* LoadingCell.xib */; };
+		1D43CB5725A1F2C600859F91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D43CB5925A1F2C600859F91 /* Localizable.strings */; };
+		1D45961525A2040500277D58 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D45961725A2040500277D58 /* InfoPlist.strings */; };
 		1D50A4432594C8440001B551 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D50A4422594C8440001B551 /* AppDelegate.swift */; };
 		1D50A4452594C8440001B551 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D50A4442594C8440001B551 /* SceneDelegate.swift */; };
 		1D50A4472594C8440001B551 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D50A4462594C8440001B551 /* SearchViewController.swift */; };
@@ -29,8 +31,6 @@
 
 /* Begin PBXFileReference section */
 		1D43CAFD2596082700859F91 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
-		1D43CB052596108A00859F91 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
-		1D43CB11259A11F600859F91 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		1D43CB17259A5E7E00859F91 /* UIImageView + DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + DownloadImage.swift"; sourceTree = "<group>"; };
 		1D43CB1D259B441100859F91 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1D43CB21259B712700859F91 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -39,6 +39,15 @@
 		1D43CB2A259B901F00859F91 /* LandscapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeViewController.swift; sourceTree = "<group>"; };
 		1D43CB2D259B946600859F91 /* FadeOutAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationController.swift; sourceTree = "<group>"; };
 		1D43CB32259BB1B800859F91 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		1D43CB3F25A0E74000859F91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
+		1D43CB4225A0E80300859F91 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
+		1D43CB4525A1EC8400859F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoadingCell.xib; sourceTree = "<group>"; };
+		1D43CB4825A1ECB100859F91 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LoadingCell.strings; sourceTree = "<group>"; };
+		1D43CB4B25A1EDB900859F91 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		1D43CB5825A1F2C600859F91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1D45961025A1F8E100277D58 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1D45961625A2040500277D58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D45961925A2041500277D58 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D50A43F2594C8440001B551 /* SearchMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D50A4422594C8440001B551 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D50A4442594C8440001B551 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,8 +127,8 @@
 			children = (
 				1D43CAFD2596082700859F91 /* SearchResultCell.swift */,
 				1D50A45E2594F6C00001B551 /* SearchResultCell.xib */,
-				1D43CB052596108A00859F91 /* NothingFoundCell.xib */,
-				1D43CB11259A11F600859F91 /* LoadingCell.xib */,
+				1D43CB4025A0E74000859F91 /* NothingFoundCell.xib */,
+				1D43CB4625A1EC8400859F91 /* LoadingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +219,8 @@
 				1D43CB36259CA20600859F91 /* Detail Search */,
 				1D50A4582594D6720001B551 /* Supporting Files */,
 				1D43CB3B259CA31300859F91 /* Extensions */,
+				1D43CB5925A1F2C600859F91 /* Localizable.strings */,
+				1D45961725A2040500277D58 /* InfoPlist.strings */,
 			);
 			path = SearchMusic;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 1D50A4362594C8440001B551;
 			productRefGroup = 1D50A4402594C8440001B551 /* Products */;
@@ -281,9 +293,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D50A44C2594C8490001B551 /* Assets.xcassets in Resources */,
-				1D43CB12259A11F600859F91 /* LoadingCell.xib in Resources */,
+				1D45961525A2040500277D58 /* InfoPlist.strings in Resources */,
+				1D43CB5725A1F2C600859F91 /* Localizable.strings in Resources */,
+				1D43CB4425A1EC8400859F91 /* LoadingCell.xib in Resources */,
 				1D50A45F2594F6C00001B551 /* SearchResultCell.xib in Resources */,
-				1D43CB062596108A00859F91 /* NothingFoundCell.xib in Resources */,
+				1D43CB3E25A0E74000859F91 /* NothingFoundCell.xib in Resources */,
 				1D50A44A2594C8440001B551 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,10 +328,47 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		1D43CB4025A0E74000859F91 /* NothingFoundCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D43CB3F25A0E74000859F91 /* en */,
+				1D43CB4225A0E80300859F91 /* de */,
+			);
+			name = NothingFoundCell.xib;
+			sourceTree = "<group>";
+		};
+		1D43CB4625A1EC8400859F91 /* LoadingCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D43CB4525A1EC8400859F91 /* Base */,
+				1D43CB4825A1ECB100859F91 /* de */,
+			);
+			name = LoadingCell.xib;
+			sourceTree = "<group>";
+		};
+		1D43CB5925A1F2C600859F91 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D43CB5825A1F2C600859F91 /* en */,
+				1D45961025A1F8E100277D58 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		1D45961725A2040500277D58 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D45961625A2040500277D58 /* en */,
+				1D45961925A2041500277D58 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		1D50A4482594C8440001B551 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1D50A4492594C8440001B551 /* Base */,
+				1D43CB4B25A1EDB900859F91 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -329,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -390,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  SearchMusic
+
+  Created by Mark Lysenko on 03.01.2021.
+  
+*/
+
+CFBundleDisplayName = "MusikSuchen";
